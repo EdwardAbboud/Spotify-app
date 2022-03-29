@@ -10,19 +10,19 @@ This project utilizes the Spotify API.
 
 ## Folder Structure ##
 
-public
-└── style.css
-src
-└── components
-    └── animations.js
-    └── navbar.js
-└── pages
-    └── welcomePage.js
-└── views
-    └── welcomeViews.js
-└── app.js
-└── constants.js
-└── data.js
-index.html
+public<br>
+└── style.css<br>
+src<br>
+└── components<br>
+    └── animations.js<br>
+    └── navbar.js<br>
+└── pages<br>
+    └── welcomePage.js<br>
+└── views<br>
+    └── welcomeViews.js<br>
+└── app.js<br>
+└── constants.js<br>
+└── data.js<br>
+index.html<br>
 
 ## Deployed app ##
