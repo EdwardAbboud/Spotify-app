@@ -1,14 +1,14 @@
-#Playlist-ify#
+# Playlist-ify #
 
 This project utilizes the Spotify API.
 
-###Description###
+### Description ###
 
-##Structure of the project##
+## Structure of the project ##
 
-##Screenshot##
+## Screenshot ##
 
-##Folder Structure##
+## Folder Structure ##
 
 public
 └── style.css
@@ -25,4 +25,4 @@ src
 └── data.js
 index.html
 
-##Deployed app##
+## Deployed app ##
