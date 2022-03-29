@@ -1,4 +1,4 @@
-import { HOME_BUTTON_ID, NAVBAR_CONTAINER_ID } from "../constants.js";
+import { HOME_BUTTON_ID, NAVBAR_CONTAINER_ID, SIGN_IN_BUTTON } from "../constants.js";
 
 // navbar DOM creator
 export const createNavbar = () => {
@@ -6,9 +6,9 @@ export const createNavbar = () => {
     const nav = document.createElement('div');
     nav.classList.add('navbar');
     nav.innerHTML = String.raw`
-    <img class="logo" src="public/assets/spotify-logo.png">
+    <button id=${HOME_BUTTON_ID}>Home</button>
     <h1>Playlist-ify</h1>
-    <button id= ${HOME_BUTTON_ID}>Home</button>
+    <button id=${SIGN_IN_BUTTON}><img class="logo" src="public/assets/spotify-logo.png">Sign in</button>
     `
     navContainer.appendChild(nav);
 }

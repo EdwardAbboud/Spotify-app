@@ -9,7 +9,7 @@
     --light-grey: #8B8B8B;
     --dark-grey: #6b6b6b;
     font-family: 'Source Sans Pro', sans-serif;
-    color: white;
+    color: var(--white);
     font-size: 18px;
 }
 
@@ -19,7 +19,7 @@ body {
 
 /* Navbar */
 #navbar-container {
-    width: 100vw;
+    width: 100%;
     background-color: var(--light-bg);
 }
 .navbar {
@@ -32,9 +32,9 @@ body {
 }
 
 .logo {
-    width: 30px;
-    padding: 15px;
-    margin-right: 20px;
+    width: 1rem;
+    padding: 0px;
+    margin-right: 6px;
 }
 
 h1 {
@@ -42,6 +42,7 @@ h1 {
     margin: 0 auto;
 }
 
+/* Buttons */
 button {
     border: 2px solid transparent;
     cursor: pointer;
@@ -50,8 +51,43 @@ button {
     font-size: 1.2rem;
 }
 
+#sign-in-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sign-in-button:active,
+button:active{
+    background-color: var(--light-grey);
+    transition: 0.1s;
+}
+
 button:hover {
-   border-bottom: 2px solid #20DF64;
+   border-top: 2px solid var(--bright-green);
+}
+
+#get-playlist-button {
+    border: 2px solid var(--white);
+    border-radius: 20px;;
+    padding: .6rem 2.8rem;
+    margin-bottom: 5vh;
+    font-size: 2rem;
+    font-weight: bold;
+    z-index: 2;
+}
+
+#get-playlist-button:hover{
+    color: var(--dark-bg);
+    background-color: var(--bright-green);
+    border: 2px solid var(--light-bg);
+    transition: 0.5s;
+}
+
+#get-playlist-button:active {
+    color: var(--dark-bg);
+    background-color: var(--white);
+    transition: 0s;
 }
 
 .centered {
@@ -59,13 +95,112 @@ button:hover {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 80vw;
+  /* width: 80vw; */
   margin: auto;
 }
 
 /* Welcome page */
+.welcome-img-container {
+    width: 100%;
+    height: 35vh;
+    overflow: hidden;
+    background-color: var(--dark-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .welcome-img {
-    width: 80vw;
-    max-width: 1200px;;
-    margin-top: 10vh;
+    padding: 40px 0 0 0;
+    width: 65vw;
+    max-width: 1200px;
+}
+
+.banner-container {
+    width: 100%;
+    height: 45vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    
+    left: 0;
+    z-index: 1;
+}
+
+.welcome-banner {
+    width: 100%;
+    /* filter: invert(1); */
+    filter: hue-rotate(260deg);
+    -webkit-animation: filter-animation 8s infinite;
+    animation: filter-animation 8s infinite;
+}
+
+@-webkit-keyframes filter-animation {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  
+  50% {
+    -webkit-filter: hue-rotate(100deg);
+  }
+  
+  100% {
+    -webkit-filter: hue-rotate(0deg);
+  }
+}
+
+@keyframes filter-animation {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  
+  50% {
+    filter: hue-rotate(100deg);
+  }
+  
+  100% {
+    filter: hue-rotate(0deg);
+  }
+}
+/* Media Queries */
+
+@media screen and (max-width:800px) {
+    .welcome-banner {
+    width: 180%;
+    }
+
+    .welcome-img {
+    width: 100vw;
+    max-width: 1200px;
+    margin-top: 5vh;
+    }
+
+    .welcome-img-container {
+        height: 30vh;
+    }
+
+    .banner-container{
+        height: 45vh;
+        align-items: flex-end;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    h1 {
+        font-size: 1.2rem;;
+    }
+
+    .navbar {
+    width: 95vw;
+    }
+
+    #get-playlist-button {
+    padding: 1rem 2.8rem;
+    margin: 5vh 0;
+    font-size: 2rem;
+    font-weight: bold;
+    z-index: 2;
+}
 }
